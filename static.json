@@ -1,7 +1,4 @@
 {
-	"root": "/",
-	"clean_urls": false,
-	"routes": {
-		"/**": "/itsa_public/index.html"
-	}
+	"root": "itsa",
+	"clean_urls": false
 }
