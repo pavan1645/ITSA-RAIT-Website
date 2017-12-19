@@ -2,6 +2,6 @@
 	"root": "/",
 	"clean_urls": false,
 	"routes": {
-		"/*.html": "/itsa_public/index.html"
+		"/**": "/itsa_public/index.html"
 	}
 }
