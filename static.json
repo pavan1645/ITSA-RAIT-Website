@@ -1,4 +1,8 @@
 {
-	"root": "itsa",
-	"clean_urls": false
+	"root": "public",
+	"clean_urls": true,
+	"routes" : {
+		"/itsa" : "/itsa/index.html",
+		"/patatap" : "/patatap/index.html"
+	}
 }
