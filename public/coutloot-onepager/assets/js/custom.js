@@ -21,6 +21,11 @@ var content = [
 	}
 ]
 
+$(window).on("load", function () {
+	$("#loader").css("display", "none");
+	$("#display-content").css("display","block");
+});
+
 $(document).ready(function () {
 	$('.sidenav').sidenav({ "edge": "right" });
 	window.addEventListener("resize", function () {

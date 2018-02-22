@@ -14,166 +14,116 @@
 </head>
 
 <body>
-	
-	<div class="navbar-fixed">
-		<nav class="white">
-			<div class="nav-wrapper container">
-				<a href="#" class="brand-logo black-text">Coutloot</a>
-				<a href="#" data-target="mobile-demo" class="sidenav-trigger right">
-					<i class="material-icons black-text">menu</i>
-				</a>
-				<ul id="nav-mobile" class="hide-on-med-and-down grey-text text-darken-1">
-					<li>
-						<a href="sass.html">News</a>
-					</li>
-					<li>
-						<a href="badges.html">About</a>
-					</li>
-					<li>
-						<a href="collapsible.html">People</a>
-					</li>
-					<li>
-						<a href="collapsible.html">Impact</a>
-					</li>
-					<li>
-						<a href="collapsible.html">Jobs</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
+	<div id="loader">
+		<div></div>
 	</div>
+	<div id="display-content" style="display:none">
+		<div class="navbar-fixed">
+			<nav class="white">
+				<div class="nav-wrapper container">
+					<a href="#" class="brand-logo black-text">Coutloot</a>
+					<a href="#" data-target="mobile-demo" class="sidenav-trigger right">
+						<i class="material-icons black-text">menu</i>
+					</a>
+					<ul id="nav-mobile" class="hide-on-med-and-down grey-text text-darken-1">
+						<li>
+							<a href="#">News</a>
+						</li>
+						<li>
+							<a href="#">About</a>
+						</li>
+						<li>
+							<a href="#">People</a>
+						</li>
+						<li>
+							<a href="#">Impact</a>
+						</li>
+						<li>
+							<a href="#">Jobs</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		
+		<ul class="sidenav" id="mobile-demo">
+			<li>
+				<a href="#">News</a>
+			</li>
+			<li>
+				<a href="#">About</a>
+			</li>
+			<li>
+				<a href="#">People</a>
+			</li>
+			<li>
+				<a href="#">Impact</a>
+			</li>
+			<li>
+				<a href="#">Jobs</a>
+			</li>
+			<li>
+				<a href="#">Mobile</a>
+			</li>
+		</ul>
+		
+		<!-- First block image -->
+		<section class="first-block animated slideInLeft">
+			<div class="row">
+				<div class="col l8 offset-l4 imgDiv">
+					<img src="assets/images/one.png" alt="" class="responsive-img">
+				</div>
+			</div>
+			<div class="overlay-text">
+				<h4 class="title">
+					We exist to create a new banking experience — one that is more 
+					<span>diverse, open and fair.</span>
+				</h4>
+			</div>
+		</section>
+		
+		<!-- Second card section -->
+		<section class="second-block">
+			<div class="row white">
+				<div class="col l4 hover" onclick="loadSideNav(1)">
+					<p class="grey-text">February 06, 2018</p>
+					<h5 class="title">
+						A Q&A with Antony Jenkins
+					</h5>
+					<h6 class="desc">
+						10x Future Technologies Founder &amp; Executive Chairman Antony Jenkins discusses the challenges and opportunities facing
+						banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&amp;A with Westpac Wire.
+					</h6>
+				</div>
+				<div class="col l4 hover" onclick="loadSideNav(2)">
+					<p class="grey-text">February 06, 2018</p>
+					<h5 class="title">
+						A Q&A with Antony Jenkins
+					</h5>
+					<h6 class="desc">
+						10x Future Technologies Founder &amp; Executive Chairman Antony Jenkins discusses the challenges and opportunities facing
+						banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&amp;A with Westpac Wire.
+					</h6>
+				</div>
+				<div class="col l4 hover" onclick="loadSideNav(3)">
+					<p class="grey-text">February 06, 2018</p>
+					<h5 class="title">
+						 Making banking 10x better
+					</h5>
+					<h6 class="desc">
+						 10x Future Technologies Founder and Executive Chairman Antony Jenkins talks to Will Beeson, Creator and Host of Rebank –
+						Banking the Future, in this podcast that looks at how 10x is transforming financial services through technology to make banking
+						better for banks, their customers and society. Click here to listen to the podcast.
+					</h6>
+				</div>
+			</div>
+		</section>
 	
-	<ul class="sidenav" id="mobile-demo">
-		<li>
-			<a href="sass.html">News</a>
-		</li>
-		<li>
-			<a href="badges.html">About</a>
-		</li>
-		<li>
-			<a href="collapsible.html">People</a>
-		</li>
-		<li>
-			<a href="collapsible.html">Impact</a>
-		</li>
-		<li>
-			<a href="collapsible.html">Jobs</a>
-		</li>
-		<li>
-			<a href="mobile.html">Mobile</a>
-		</li>
-	</ul>
-	
-	<!-- First block image -->
-	<section class="first-block animated slideInLeft">
-		<div class="row">
-			<div class="col l8 offset-l4 imgDiv">
-				<img src="assets/images/one.png" alt="" class="responsive-img">
-			</div>
-		</div>
-		<div class="overlay-text">
-			<h4 class="title">
-				We exist to create a new banking experience — one that is more 
-				<span>diverse, open and fair.</span>
-			</h4>
-		</div>
-	</section>
-	
-	<!-- Second card section -->
-	<section class="second-block">
-		<div class="row white">
-			<div class="col l4 hover" onclick="loadSideNav(1)">
-				<p class="grey-text">February 06, 2018</p>
-				<h5 class="title">
-					A Q&A with Antony Jenkins
-				</h5>
-				<h6 class="desc">
-					10x Future Technologies Founder &amp; Executive Chairman Antony Jenkins discusses the challenges and opportunities facing
-					banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&amp;A with Westpac Wire.
-				</h6>
-			</div>
-			<div class="col l4 hover" onclick="loadSideNav(2)">
-				<p class="grey-text">February 06, 2018</p>
-				<h5 class="title">
-					A Q&A with Antony Jenkins
-				</h5>
-				<h6 class="desc">
-					10x Future Technologies Founder &amp; Executive Chairman Antony Jenkins discusses the challenges and opportunities facing
-					banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&amp;A with Westpac Wire.
-				</h6>
-			</div>
-			<div class="col l4 hover" onclick="loadSideNav(3)">
-				<p class="grey-text">February 06, 2018</p>
-				<h5 class="title">
-					 Making banking 10x better
-				</h5>
-				<h6 class="desc">
-					 10x Future Technologies Founder and Executive Chairman Antony Jenkins talks to Will Beeson, Creator and Host of Rebank –
-					Banking the Future, in this podcast that looks at how 10x is transforming financial services through technology to make banking
-					better for banks, their customers and society. Click here to listen to the podcast.
-				</h6>
-			</div>
-		</div>
-	</section>
-
-	<!-- Third image section -->
-	<section class="third-block">
-		<div class="row">
-			<div class="col l8 imgDiv"></div>
-			<div class="col overlay-text"  onclick="openUrl('www.google.com')">
-				<h5 class="title">
-					About 10x
-					<i class="material-icons right grey-text">call_made</i>
-				</h5>
-				<h6 class="desc">We are a team of financial services experts, technologists and creatives designing the future of money.</h6>
-			</div>
-		</div>
-	</section>
-	
-	<!-- Fourth card section -->
-	<section class="second-block">
-		<div class="row white">
-			<div class="col l4 hover" onclick="loadSideNav(1)">
-				<p class="grey-text">February 06, 2018</p>
-				<h5 class="title">
-					A Q&A with Antony Jenkins
-				</h5>
-				<h6 class="desc">
-					10x Future Technologies Founder &amp; Executive Chairman Antony Jenkins discusses the challenges and opportunities facing
-					banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&amp;A with Westpac Wire.
-				</h6>
-			</div>
-			<div class="col l4 hover" onclick="loadSideNav(0)">
-				<p class="grey-text">February 06, 2018</p>
-				<h5 class="title">
-					A Q&A with Antony Jenkins
-				</h5>
-				<h6 class="desc">
-					10x Future Technologies Founder &amp; Executive Chairman Antony Jenkins discusses the challenges and opportunities facing
-					banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&amp;A with Westpac Wire.
-				</h6>
-			</div>
-			<div class="col l4 hover" onclick="loadSideNav(2)">
-				<p class="grey-text">February 06, 2018</p>
-				<h5 class="title">
-					Making banking 10x better
-				</h5>
-				<h6 class="desc">
-					10x Future Technologies Founder and Executive Chairman Antony Jenkins talks to Will Beeson, Creator and Host of Rebank –
-					Banking the Future, in this podcast that looks at how 10x is transforming financial services through technology to make
-					banking better for banks, their customers and society. Click here to listen to the podcast.
-				</h6>
-			</div>
-		</div>
-	</section>
-
-
-	<!-- fifth image section -->
-	<section class="fifth-block">
-		<div class="row">
-			<div class="col l6" onclick="openUrl('www.google.com')">
-				<img src="assets/images/three.jpg" class="responsive-img" alt="">
-				<div class="text-div">
+		<!-- Third image section -->
+		<section class="third-block">
+			<div class="row">
+				<div class="col l8 imgDiv"></div>
+				<div class="col overlay-text"  onclick="openUrl('www.google.com')">
 					<h5 class="title">
 						About 10x
 						<i class="material-icons right grey-text">call_made</i>
@@ -181,46 +131,100 @@
 					<h6 class="desc">We are a team of financial services experts, technologists and creatives designing the future of money.</h6>
 				</div>
 			</div>
-			<div class="col l6" onclick="openUrl('www.google.com')">
-				<img src="assets/images/five.jpg" class="responsive-img" alt="">
-				<div class="text-div">
+		</section>
+		
+		<!-- Fourth card section -->
+		<section class="second-block">
+			<div class="row white">
+				<div class="col l4 hover" onclick="loadSideNav(1)">
+					<p class="grey-text">February 06, 2018</p>
 					<h5 class="title">
-						About 10x
-						<i class="material-icons right grey-text">call_made</i>
+						A Q&A with Antony Jenkins
 					</h5>
-					<h6 class="desc">We are a team of financial services experts, technologists and creatives designing the future of money.</h6>
+					<h6 class="desc">
+						10x Future Technologies Founder &amp; Executive Chairman Antony Jenkins discusses the challenges and opportunities facing
+						banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&amp;A with Westpac Wire.
+					</h6>
+				</div>
+				<div class="col l4 hover" onclick="loadSideNav(0)">
+					<p class="grey-text">February 06, 2018</p>
+					<h5 class="title">
+						A Q&A with Antony Jenkins
+					</h5>
+					<h6 class="desc">
+						10x Future Technologies Founder &amp; Executive Chairman Antony Jenkins discusses the challenges and opportunities facing
+						banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&amp;A with Westpac Wire.
+					</h6>
+				</div>
+				<div class="col l4 hover" onclick="loadSideNav(2)">
+					<p class="grey-text">February 06, 2018</p>
+					<h5 class="title">
+						Making banking 10x better
+					</h5>
+					<h6 class="desc">
+						10x Future Technologies Founder and Executive Chairman Antony Jenkins talks to Will Beeson, Creator and Host of Rebank –
+						Banking the Future, in this podcast that looks at how 10x is transforming financial services through technology to make
+						banking better for banks, their customers and society. Click here to listen to the podcast.
+					</h6>
+				</div>
 			</div>
+		</section>
+	
+	
+		<!-- fifth image section -->
+		<section class="fifth-block">
+			<div class="row">
+				<div class="col l6" onclick="openUrl('www.google.com')">
+					<img src="assets/images/three.jpg" class="responsive-img" alt="">
+					<div class="text-div">
+						<h5 class="title">
+							About 10x
+							<i class="material-icons right grey-text">call_made</i>
+						</h5>
+						<h6 class="desc">We are a team of financial services experts, technologists and creatives designing the future of money.</h6>
+					</div>
+				</div>
+				<div class="col l6" onclick="openUrl('www.google.com')">
+					<img src="assets/images/five.jpg" class="responsive-img" alt="">
+					<div class="text-div">
+						<h5 class="title">
+							About 10x
+							<i class="material-icons right grey-text">call_made</i>
+						</h5>
+						<h6 class="desc">We are a team of financial services experts, technologists and creatives designing the future of money.</h6>
+				</div>
+			</div>
+		</section>
+	
+		<footer >
+			<hr>
+			<div class="row">
+				<div class="col l4 s12">
+					<h6 class="desc">&copy; 2017</h6>
+				</div>
+				<div class="col l4 s12">
+					<h6 class="desc">
+						 5 Howick Place <br> London SW1P 1WG
+					</h6>
+				</div>
+				<div class="col l4 s12">
+					<h6 class="desc">
+						+44 (0) 203 912 0160 <br> 
+						info@10xbanking.com <br>
+						@10xbanking
+					</h6>
+				</div>
+			</div>
+		</footer>
+	
+		<!-- Side nav div -->
+		<div id="custom-sidenav" class="sidenav">
+			<h4 onclick="closenav()"> <i class="material-icons black-text">close</i></h4>
+			<h5 class="title">
+			</h5>
+			<h6 class="desc">
+			</h6>
 		</div>
-	</section>
-
-	<footer >
-		<hr>
-		<div class="row">
-			<div class="col l4 s12">
-				<h6 class="desc">&copy; 2017</h6>
-			</div>
-			<div class="col l4 s12">
-				<h6 class="desc">
-					 5 Howick Place <br> London SW1P 1WG
-				</h6>
-			</div>
-			<div class="col l4 s12">
-				<h6 class="desc">
-					+44 (0) 203 912 0160 <br> 
-					info@10xbanking.com <br>
-					@10xbanking
-				</h6>
-			</div>
-		</div>
-	</footer>
-
-	<!-- Side nav div -->
-	<div id="custom-sidenav" class="sidenav">
-		<h4 onclick="closenav()"> <i class="material-icons black-text">close</i></h4>
-		<h5 class="title">
-		</h5>
-		<h6 class="desc">
-		</h6>
 	</div>
 </body>
 

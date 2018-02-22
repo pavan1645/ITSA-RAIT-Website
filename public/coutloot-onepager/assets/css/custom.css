@@ -2,6 +2,28 @@ body {
 	background-color: #f9fafb;
 	font-family: 'Montserrat', sans-serif;
 }
+
+#loader{
+	height: 100vh;
+	width: 100vw;
+	background-color: #f9fafb;
+}
+#loader div {
+	margin: 40vh auto; 
+	border-top: 16px solid #9c27b0;
+	border-right: 16px solid #ff9800;
+	border-bottom: 16px solid #ffc107;
+	border-left: 16px solid #009688;
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	animation: spin 2s linear infinite;
+}
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
 nav{height: auto; box-shadow: none}
 nav .nav-wrapper{
 	width: 100%;
