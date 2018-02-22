@@ -1,0 +1,121 @@
+body {
+	background-color: #f9fafb;
+	font-family: 'Montserrat', sans-serif;
+}
+nav{height: auto; box-shadow: none}
+nav .nav-wrapper{
+	width: 100%;
+}
+nav ul{
+	display: flex;
+	justify-content: center;
+	margin: 2rem 0rem 2rem 0rem;
+}
+nav ul li a{color: #757575; }
+nav ul li a:hover{
+	background-color: white;
+	color: black; 
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+section, footer{
+	margin: 7%;	
+}
+
+.title{
+	font-weight: 400;
+	line-height: 1.5
+}
+.desc{
+	font-weight: 300; 
+	color: #424242;
+	line-height: 2
+}
+.hover:hover{
+	background-color: #fbcd2b;
+	-webkit-transition: background-color 0.3s ease-in;
+	-moz-transition: background-color 0.3s ease-in;
+	transition: background-color 0.3s ease-in;
+}
+
+.first-block, .third-block {
+	max-height: 60vh !important
+}
+.first-block .overlay-text{
+	position: absolute;
+	width: 40%;
+	top: 30%;
+}
+.first-block .imgDiv{background: #c0d2e7;}
+.first-block .imgDiv img{height: 50vh;}
+.first-block span{
+	border-bottom:solid 3px #fbcd2b 
+}
+
+.second-block>.row, .third-block>.row{
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+}
+.second-block .col{
+	padding: 3%;
+	flex: 1
+}
+
+.third-block{min-height: 70vh}
+.third-block .imgDiv{
+	background: url("/assets/images/two.jpg");
+	min-height: 70vh;
+	width: 100%
+}
+.third-block .overlay-text{
+	padding: 7%;
+	color: black;
+	background-color: white;
+	flex: 1;
+	max-height: 50vh;
+	align-self: flex-end;
+	margin-left: -15%;
+}
+
+.fifth-block .col{padding: 0;}
+.fifth-block .col:first-of-type{padding-right: 4%}
+.fifth-block .col:last-of-type{padding-left: 4%}
+.fifth-block .text-div{
+	background-color: white;
+	padding: 7%
+}
+
+footer hr{width: 80%}
+
+@media screen and (max-width: 992px){
+	nav .brand-logo{float: none !important}
+	.nav-wrapper div{padding: 1rem}
+
+	section, footer{
+		margin: 0 7% 0 7%;
+	}
+	section:first-of-type{
+		margin: 0
+	}
+
+	.first-block {
+		max-height: auto !important
+	}
+	.first-block .overlay-text{
+		position: relative;
+		width: 100%;
+		padding: 0% 7% 7% 7%
+	}
+
+	.second-block>.row, .third-block>.row{
+		display: block
+	}
+
+	.third-block .imgDiv{min-height: 50vh}
+	.third-block .overlay-text{margin: 0}
+
+	.fifth-block .col{padding: 0 !important;}
+}
