@@ -64,9 +64,8 @@
 		</li>
 	</ul>
 	
-	
 	<!-- First block image -->
-	<section class="first-block">
+	<section class="first-block animated slideInLeft">
 		<div class="row">
 			<div class="col l8 offset-l4 imgDiv">
 				<img src="assets/images/one.png" alt="" class="responsive-img">
@@ -83,7 +82,7 @@
 	<!-- Second card section -->
 	<section class="second-block">
 		<div class="row white">
-			<div class="col l4 hover">
+			<div class="col l4 hover" onclick="loadSideNav(1)">
 				<p class="grey-text">February 06, 2018</p>
 				<h5 class="title">
 					A Q&A with Antony Jenkins
@@ -93,7 +92,7 @@
 					banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&amp;A with Westpac Wire.
 				</h6>
 			</div>
-			<div class="col l4 hover">
+			<div class="col l4 hover" onclick="loadSideNav(2)">
 				<p class="grey-text">February 06, 2018</p>
 				<h5 class="title">
 					A Q&A with Antony Jenkins
@@ -103,7 +102,7 @@
 					banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&amp;A with Westpac Wire.
 				</h6>
 			</div>
-			<div class="col l4 hover">
+			<div class="col l4 hover" onclick="loadSideNav(3)">
 				<p class="grey-text">February 06, 2018</p>
 				<h5 class="title">
 					 Making banking 10x better
@@ -121,7 +120,7 @@
 	<section class="third-block">
 		<div class="row">
 			<div class="col l8 imgDiv"></div>
-			<div class="col overlay-text">
+			<div class="col overlay-text"  onclick="openUrl('www.google.com')">
 				<h5 class="title">
 					About 10x
 					<i class="material-icons right grey-text">call_made</i>
@@ -134,7 +133,7 @@
 	<!-- Fourth card section -->
 	<section class="second-block">
 		<div class="row white">
-			<div class="col l4 hover">
+			<div class="col l4 hover" onclick="loadSideNav(1)">
 				<p class="grey-text">February 06, 2018</p>
 				<h5 class="title">
 					A Q&A with Antony Jenkins
@@ -144,7 +143,7 @@
 					banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&amp;A with Westpac Wire.
 				</h6>
 			</div>
-			<div class="col l4 hover">
+			<div class="col l4 hover" onclick="loadSideNav(0)">
 				<p class="grey-text">February 06, 2018</p>
 				<h5 class="title">
 					A Q&A with Antony Jenkins
@@ -154,7 +153,7 @@
 					banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&amp;A with Westpac Wire.
 				</h6>
 			</div>
-			<div class="col l4 hover">
+			<div class="col l4 hover" onclick="loadSideNav(2)">
 				<p class="grey-text">February 06, 2018</p>
 				<h5 class="title">
 					Making banking 10x better
@@ -172,7 +171,7 @@
 	<!-- fifth image section -->
 	<section class="fifth-block">
 		<div class="row">
-			<div class="col l6">
+			<div class="col l6" onclick="openUrl('www.google.com')">
 				<img src="assets/images/three.jpg" class="responsive-img" alt="">
 				<div class="text-div">
 					<h5 class="title">
@@ -182,7 +181,7 @@
 					<h6 class="desc">We are a team of financial services experts, technologists and creatives designing the future of money.</h6>
 				</div>
 			</div>
-			<div class="col l6">
+			<div class="col l6" onclick="openUrl('www.google.com')">
 				<img src="assets/images/five.jpg" class="responsive-img" alt="">
 				<div class="text-div">
 					<h5 class="title">
@@ -197,15 +196,15 @@
 	<footer >
 		<hr>
 		<div class="row">
-			<div class="col l4">
+			<div class="col l4 s12">
 				<h6 class="desc">&copy; 2017</h6>
 			</div>
-			<div class="col l4">
+			<div class="col l4 s12">
 				<h6 class="desc">
 					 5 Howick Place <br> London SW1P 1WG
 				</h6>
 			</div>
-			<div class="col l4">
+			<div class="col l4 s12">
 				<h6 class="desc">
 					+44 (0) 203 912 0160 <br> 
 					info@10xbanking.com <br>
@@ -214,6 +213,15 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- Side nav div -->
+	<div id="custom-sidenav" class="sidenav">
+		<h4 onclick="closenav()"> <i class="material-icons black-text">close</i></h4>
+		<h5 class="title">
+		</h5>
+		<h6 class="desc">
+		</h6>
+	</div>
 </body>
 
 
