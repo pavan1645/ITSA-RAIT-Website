@@ -7,7 +7,7 @@
 	<link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection"/>
 	<link type="text/css" rel="stylesheet" href="assets/css/animate.min.css"/>
 	<link type="text/css" rel="stylesheet" href="assets/css/custom.css"/>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
 	<!--Let browser know website is optimized for mobile-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>One Pager</title>
@@ -85,7 +85,7 @@
 		<!-- Second card section -->
 		<section class="second-block">
 			<div class="row white">
-				<div class="col l4 hover" onclick="loadSideNav(1)">
+				<div class="col l4 hover" onclick="loadSideNav(0, 'one1')">
 					<p class="grey-text">February 06, 2018</p>
 					<h5 class="title">
 						A Q&A with Antony Jenkins
@@ -95,17 +95,16 @@
 						banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&amp;A with Westpac Wire.
 					</h6>
 				</div>
-				<div class="col l4 hover" onclick="loadSideNav(2)">
+				<div class="col l4 hover" onclick="loadSideNav(0, 'one2')">
 					<p class="grey-text">February 06, 2018</p>
 					<h5 class="title">
-						A Q&A with Antony Jenkins
+						 Open banking – what is it and why does it matter?
 					</h5>
 					<h6 class="desc">
-						10x Future Technologies Founder &amp; Executive Chairman Antony Jenkins discusses the challenges and opportunities facing
-						banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&amp;A with Westpac Wire.
+						 Open banking is now a reality. So what’s changing and what will the impact be for businesses and consumers?
 					</h6>
 				</div>
-				<div class="col l4 hover" onclick="loadSideNav(3)">
+				<div class="col l4 hover" onclick="loadSideNav(0, 'one3')">
 					<p class="grey-text">February 06, 2018</p>
 					<h5 class="title">
 						 Making banking 10x better
@@ -136,7 +135,7 @@
 		<!-- Fourth card section -->
 		<section class="second-block">
 			<div class="row white">
-				<div class="col l4 hover" onclick="loadSideNav(1)">
+				<div class="col l4 hover" onclick="loadSideNav(1, 'two1')">
 					<p class="grey-text">February 06, 2018</p>
 					<h5 class="title">
 						A Q&A with Antony Jenkins
@@ -146,7 +145,7 @@
 						banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&amp;A with Westpac Wire.
 					</h6>
 				</div>
-				<div class="col l4 hover" onclick="loadSideNav(0)">
+				<div class="col l4 hover" onclick="loadSideNav(1, 'two2')">
 					<p class="grey-text">February 06, 2018</p>
 					<h5 class="title">
 						A Q&A with Antony Jenkins
@@ -156,7 +155,7 @@
 						banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&amp;A with Westpac Wire.
 					</h6>
 				</div>
-				<div class="col l4 hover" onclick="loadSideNav(2)">
+				<div class="col l4 hover" onclick="loadSideNav(1, 'two3')">
 					<p class="grey-text">February 06, 2018</p>
 					<h5 class="title">
 						Making banking 10x better
@@ -219,9 +218,9 @@
 	
 		<!-- Side nav div -->
 		<div id="custom-sidenav" class="sidenav">
-			<h4 onclick="closenav()"> <i class="material-icons black-text">close</i></h4>
-			<h5 class="title">
-			</h5>
+			<h3 onclick="closenav()"> <i class="material-icons black-text">close</i></h3>
+			<h4 class="title left-text">
+			</h4> 
 			<h6 class="desc">
 			</h6>
 		</div>
@@ -236,3 +235,4 @@
 <script type="text/javascript" src="assets/js/materialize.min.js"></script>
 <script type="text/javascript" src="assets/js/custom.js"></script>
 </html>
+

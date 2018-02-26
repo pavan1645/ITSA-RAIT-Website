@@ -71,7 +71,7 @@ section, footer{
 	width: 40%;
 	top: 30%;
 }
-.first-block .imgDiv{background: #c0d2e7;}
+.first-block .imgDiv{background: #c0d2e7; width: 100%}
 .first-block .imgDiv img{height: 50vh;}
 .first-block span{
 	border-bottom:solid 3px #fbcd2b 
@@ -115,9 +115,19 @@ section, footer{
 
 footer hr{width: 80%}
 .sidenav{width: 70vw}
-#custom-sidenav h4{text-align: right}
-#custom-sidenav{
-	padding: 0% 5%;
+
+#custom-sidenav h3{text-align: right; padding-bottom: 10%}
+#custom-sidenav{padding: 0% 5% 5% 5%;}
+#custom-sidenav .desc{padding-right: 15%;}
+#custom-sidenav h6{line-height: 2.5}
+#custom-sidenav a,
+#custom-sidenav a:visited{
+	color: rgb(34, 34, 42);
+	cursor: pointer;
+}
+#custom-sidenav a:hover,
+#custom-sidenav a:focus{
+	color: rgb(58, 58, 63);
 }
 
 @media screen and (max-width: 992px){
