@@ -2,7 +2,7 @@ body {
 	background-color: #f9fafb;
 	font-family: 'Montserrat', sans-serif;
 }
-
+.navbar-fixed{z-index: 1}
 #loader{
 	height: 100vh;
 	width: 100vw;
@@ -68,7 +68,7 @@ section, footer{
 }
 .first-block .overlay-text{
 	position: absolute;
-	width: 40%;
+	width: 45vw;
 	top: 30%;
 }
 .first-block .imgDiv{background: #c0d2e7; width: 100%}
@@ -114,21 +114,29 @@ section, footer{
 .fifth-block .text-div:hover{cursor: pointer}
 
 footer hr{width: 80%}
-.sidenav{width: 70vw}
 
-#custom-sidenav h3{text-align: right; padding-bottom: 10%}
-#custom-sidenav{padding: 0% 5% 5% 5%;}
-#custom-sidenav .desc{padding-right: 15%;}
-#custom-sidenav h6{line-height: 2.5}
-#custom-sidenav a,
-#custom-sidenav a:visited{
+#custom-sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 5; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+}
+#custom-sidenav .header{
+	position: fixed;
+	margin: 0;
+	padding: 3rem 3rem 3rem 3%;
+}
+#custom-sidenav .desc{padding: 10rem 15rem 5% 5%; margin: 0}
+#custom-sidenav h6{line-height: 2.5; color: rgb(36, 36, 36)}
+#custom-sidenav a, #custom-sidenav a:visited{
 	color: rgb(34, 34, 42);
 	cursor: pointer;
 }
-#custom-sidenav a:hover,
-#custom-sidenav a:focus{
-	color: rgb(58, 58, 63);
-}
+#custom-sidenav a:hover, #custom-sidenav a:focus{color: rgb(58, 58, 63);}
 
 @media screen and (max-width: 992px){
 	nav .brand-logo{float: none !important}
@@ -158,4 +166,7 @@ footer hr{width: 80%}
 	.third-block .overlay-text{margin: 0}
 	
 	.fifth-block .col{padding: 0 !important;}
+
+	#custom-sidenav .desc, #custom-sidenav .header{padding: 5% 10% 5% 10%;}
+	#custom-sidenav .desc h5:first-of-type{padding-top: 15%}
 }

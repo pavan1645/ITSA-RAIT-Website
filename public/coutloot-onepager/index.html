@@ -27,19 +27,19 @@
 					</a>
 					<ul id="nav-mobile" class="hide-on-med-and-down grey-text text-darken-1">
 						<li>
-							<a href="#">News</a>
+							<a onclick="loadSideNav(0, 'one1')">News</a>
 						</li>
 						<li>
-							<a href="#">About</a>
+							<a onclick="loadSideNav(1, '')">About</a>
 						</li>
 						<li>
-							<a href="#">People</a>
+							<a onclick="loadSideNav(2, '')">People</a>
 						</li>
 						<li>
-							<a href="#">Impact</a>
+							<a onclick="loadSideNav(3,'two1')" href="#">Impact</a>
 						</li>
 						<li>
-							<a href="#">Jobs</a>
+							<a onclick="loadSideNav(4,'two1')">Jobs</a>
 						</li>
 					</ul>
 				</div>
@@ -98,26 +98,26 @@
 				<div class="col l4 hover" onclick="loadSideNav(0, 'one2')">
 					<p class="grey-text">February 06, 2018</p>
 					<h5 class="title">
-						 Open banking – what is it and why does it matter?
+						Open banking – what is it and why does it matter?
 					</h5>
 					<h6 class="desc">
-						 Open banking is now a reality. So what’s changing and what will the impact be for businesses and consumers?
+						Open banking is now a reality. So what’s changing and what will the impact be for businesses and consumers?
 					</h6>
 				</div>
 				<div class="col l4 hover" onclick="loadSideNav(0, 'one3')">
 					<p class="grey-text">February 06, 2018</p>
 					<h5 class="title">
-						 Making banking 10x better
+						Making banking 10x better
 					</h5>
 					<h6 class="desc">
-						 10x Future Technologies Founder and Executive Chairman Antony Jenkins talks to Will Beeson, Creator and Host of Rebank –
+						10x Future Technologies Founder and Executive Chairman Antony Jenkins talks to Will Beeson, Creator and Host of Rebank –
 						Banking the Future, in this podcast that looks at how 10x is transforming financial services through technology to make banking
 						better for banks, their customers and society. Click here to listen to the podcast.
 					</h6>
 				</div>
 			</div>
 		</section>
-	
+		
 		<!-- Third image section -->
 		<section class="third-block">
 			<div class="row">
@@ -135,41 +135,39 @@
 		<!-- Fourth card section -->
 		<section class="second-block">
 			<div class="row white">
-				<div class="col l4 hover" onclick="loadSideNav(1, 'two1')">
+				<div class="col l4 hover" onclick="loadSideNav(3, 'two1')">
 					<p class="grey-text">February 06, 2018</p>
 					<h5 class="title">
-						A Q&A with Antony Jenkins
+						Anti Modern Slavery Statement
 					</h5>
 					<h6 class="desc">
-						10x Future Technologies Founder &amp; Executive Chairman Antony Jenkins discusses the challenges and opportunities facing
-						banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&amp;A with Westpac Wire.
+						This statement sets out 10x’s actions to understand all potential modern slavery risks related to its business and to put
+						in place steps that are aimed at ensuring that there is no slavery or human trafficking in its own business and its supply
+						chains. This statement relates to actions and activities during the financial year ending December 2017
 					</h6>
 				</div>
-				<div class="col l4 hover" onclick="loadSideNav(1, 'two2')">
+				<div class="col l4 hover" onclick="loadSideNav(3, 'two2')">
 					<p class="grey-text">February 06, 2018</p>
 					<h5 class="title">
-						A Q&A with Antony Jenkins
+						Diversity &amp; Inclusion
 					</h5>
 					<h6 class="desc">
-						10x Future Technologies Founder &amp; Executive Chairman Antony Jenkins discusses the challenges and opportunities facing
-						banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&amp;A with Westpac Wire.
+						At 10x, we are committed to promoting diversity and creating an inclusive culture.
 					</h6>
 				</div>
-				<div class="col l4 hover" onclick="loadSideNav(1, 'two3')">
+				<div class="col l4 hover" onclick="loadSideNav(3, 'two3')">
 					<p class="grey-text">February 06, 2018</p>
 					<h5 class="title">
-						Making banking 10x better
+						 Women in Finance Charter
 					</h5>
 					<h6 class="desc">
-						10x Future Technologies Founder and Executive Chairman Antony Jenkins talks to Will Beeson, Creator and Host of Rebank –
-						Banking the Future, in this podcast that looks at how 10x is transforming financial services through technology to make
-						banking better for banks, their customers and society. Click here to listen to the podcast.
+						10x has signed up to The Women in Finance Charter.
 					</h6>
 				</div>
 			</div>
 		</section>
-	
-	
+		
+		
 		<!-- fifth image section -->
 		<section class="fifth-block">
 			<div class="row">
@@ -191,48 +189,51 @@
 							<i class="material-icons right grey-text">call_made</i>
 						</h5>
 						<h6 class="desc">We are a team of financial services experts, technologists and creatives designing the future of money.</h6>
+					</div>
 				</div>
-			</div>
-		</section>
-	
-		<footer >
-			<hr>
-			<div class="row">
-				<div class="col l4 s12">
-					<h6 class="desc">&copy; 2017</h6>
+			</section>
+			
+			<footer >
+				<hr>
+				<div class="row">
+					<div class="col l4 s12">
+						<h6 class="desc">&copy; 2017</h6>
+					</div>
+					<div class="col l4 s12">
+						<h6 class="desc">
+							5 Howick Place <br> London SW1P 1WG
+						</h6>
+					</div>
+					<div class="col l4 s12">
+						<h6 class="desc">
+							+44 (0) 203 912 0160 <br> 
+							info@10xbanking.com <br>
+							@10xbanking
+						</h6>
+					</div>
 				</div>
-				<div class="col l4 s12">
+			</footer>
+			
+			<!-- Side nav div -->
+			<div id="custom-sidenav">
+				<div>
+					<p class="header"> 
+						<span class="sidenav-title"></span>
+						<span class="right" onclick="closenav()"> Close</span>
+					</p>
 					<h6 class="desc">
-						 5 Howick Place <br> London SW1P 1WG
 					</h6>
 				</div>
-				<div class="col l4 s12">
-					<h6 class="desc">
-						+44 (0) 203 912 0160 <br> 
-						info@10xbanking.com <br>
-						@10xbanking
-					</h6>
-				</div>
 			</div>
-		</footer>
-	
-		<!-- Side nav div -->
-		<div id="custom-sidenav" class="sidenav">
-			<h3 onclick="closenav()"> <i class="material-icons black-text">close</i></h3>
-			<h4 class="title left-text">
-			</h4> 
-			<h6 class="desc">
-			</h6>
 		</div>
-	</div>
-</body>
-
-
-
-
-<!--JavaScript at end of body for optimized loading-->
-<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="assets/js/materialize.min.js"></script>
-<script type="text/javascript" src="assets/js/custom.js"></script>
-</html>
-
+	</body>
+	
+	
+	
+	
+	<!--JavaScript at end of body for optimized loading-->
+	<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/materialize.min.js"></script>
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+	</html>
+	
