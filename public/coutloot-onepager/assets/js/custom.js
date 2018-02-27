@@ -16,21 +16,28 @@ var content = [
 	},
 	{
 		"title": "Impact",
-		"desc": "<a onclick='displaySpan(this)'><h5 id='two1'>Anti Modern Slavery Statement</h5></a><br><h6>This statement sets out 10x’s actions to understand all potential modern slavery risks related to its business and to put in place steps that are aimed at ensuring that there is no slavery or human trafficking in its own business and its supply chains.This statement relates to actions and activities during the financial year ending December 2017 <br><br><span style='display:none'>In keeping with our values of Integrity and Impact, at 10x we care about the world we live in and strive to make it better and we seek opportunities through our work to have a positive impact particularly for those less advantaged. As part of this we recognises that we have a responsibility to take a robust approach to slavery and human trafficking.<br><br>10x is absolutely committed to preventing slavery and human trafficking in our activities, and to ensuring that our partners and our supply chains are free from slavery and human trafficking. We require vendors and suppliers to maintain and promote fundamental human rights, where employment decisions are based on free choice without any coerced or prison labour, no use of physical punishment or threats of violence or other forms of physical, sexual, psychological or verbal abuse as a method of discipline or control.</span></h6><br><a onclick='displaySpan(this)'><h5 id='two2'>Diversity & Inclusion</h5></a><br><h6>At 10x, we are committed to promoting diversity and creating an inclusive culture.<br><br><span style='display:none'>Our business is about people. We live and operate in a diverse world and at 10x we are embracing the opportunity to ensure our organisation reflects this, both in people and thought. We strive to create an environment responsive to different cultures, groups and in all our interactions with our people, partners, customers, visitors, suppliers, contractors, investors and in the communities in which we operate.<br><br>We value diversity. Fundamentally we believe it is the right thing to do. We also believe it to be critical to our effectiveness, our business success and integral to achieving our strategic objective of being 10x better and 10x better company to work for.</span></h6><br><a onclick='displaySpan(this)'><h5 id='two3'>Women in Finance Charter</h5></a><br><h6>10x has signed up to The Women in Finance Charter.<br><br><span style='display:none'>At 10x, we are committed to promoting diversity and creating an inclusive culture in an organisation that reflects the diverse world in which we live and operate.<br><br>We value diversity. Fundamentally we believe it is the right thing to do. We also believe it to be critical to our effectiveness, our business success and integral to achieving our strategic objective of being 10x better and 10x better company to work for.</span></h6>",
+		"desc": "<a onclick='displaySpan(this)'><h5 id='two1'>Anti Modern Slavery Statement</h5></a><br><h6>This statement sets out 10x’s actions to understand all potential modern slavery risks related to its business and to put in place steps that are aimed at ensuring that there is no slavery or human trafficking in its own business and its supply chains.This statement relates to actions and activities during the financial year ending December 2017 <br><br><span style='display:none'>In keeping with our values of Integrity and Impact, at 10x we care about the world we live in and strive to make it better and we seek opportunities through our work to have a positive impact particularly for those less advantaged. As part of this we recognises that we have a responsibility to take a robust approach to slavery and human trafficking.<br><br>10x is absolutely committed to preventing slavery and human trafficking in our activities, and to ensuring that our partners and our supply chains are free from slavery and human trafficking. We require vendors and suppliers to maintain and promote fundamental human rights, where employment decisions are based on free choice without any coerced or prison labour, no use of physical punishment or threats of violence or other forms of physical, sexual, psychological or verbal abuse as a method of discipline or control.</span></h6><br><a onclick='displaySpan(this)'><h5 id='two2'>Diversity & Inclusion</h5></a><br><h6>At 10x, we are committed to promoting diversity and creating an inclusive culture.<br><br><span style='display:none'>Our business is about people. We live and operate in a diverse world and at 10x we are embracing the opportunity to ensure our organisation reflects this, both in people and thought. We strive to create an environment responsive to different cultures, groups and in all our interactions with our people, partners, customers, visitors, suppliers, contractors, investors and in the communities in which we operate.<br><br>We value diversity. Fundamentally we believe it is the right thing to do. We also believe it to be critical to our effectiveness, our business success and integral to achieving our strategic objective of being 10x better and 10x better company to work for.</span></h6><br><a onclick='displaySpan(this)'><h5 id='two3'>Women in Finance Charter</h5></a><br><h6>10x has signed up to The Women in Finance Charter.<br><br><span style='display:none'>At 10x, we are committed to promoting diversity and creating an inclusive culture in an organisation that reflects the diverse world in which we live and <ul id=\"menu-sidenav\"><li onclick=\"loadSideNav(0, 'one1')\">News</li><li onclick=\"loadSideNav(1, '')\">About</li><li onclick=\"loadSideNav(2, '')\">People</li><li onclick=\"loadSideNav(3,'two1')\">Impact</li><li onclick=\"loadSideNav(4,'two1')\">Jobs</li></ul>operate.<br><br>We value diversity. Fundamentally we believe it is the right thing to do. We also believe it to be critical to our effectiveness, our business success and integral to achieving our strategic objective of being 10x better and 10x better company to work for.</span></h6>",
 		"color": "#fbcc40"
 	},
 	{
 		"title": "Jobs",
 		"desc": "<h5>Work with us</h5><h6>Do you want to be part of our transformation journey?<br><br>At 10x we know the future is going to be radically different from the past. So we are designing the future of money, reimagining the customer experience and obsessing about how to improve people’s daily lives and make things 10x better.<br><br>We are building a universal platform built on open banking principles, infinitely configurable and constantly evolving to deliver better, more personal, experiences for everyone.<br><br>We exist to transform the industry and be a catalyst for positive change. Guided by strong values of Integrity, Transformation and Impact, we actively support, respect and collaborate with our customers, partners and with each other.<br><br>We are a unique team of financial services experts, technologists and creatives, united by a passion for change, approaching challenges in a radically different way and never ever compromising on achieving a 10x better experience for our customers, for society and for the 10x Team.<br><br>careers@10xbanking.com</h6>",
 		"color": "#bec0e0"
+	},
+	{
+		"title": "Menu",
+		"desc": "<ul id=\"menu-sidenav\"><li onclick=\"loadSideNav(0, 'one1')\">News</li><li onclick=\"loadSideNav(1, '')\">About</li><li onclick=\"loadSideNav(2, '')\">People</li><li onclick=\"loadSideNav(3,'two1')\">Impact</li><li onclick=\"loadSideNav(4,'two1')\">Jobs</li></ul>",
+		"color": "#22222a"
 	}
 ]
+
 var isSidenavOpen = false;
 var sidenavWidth = "100%";
 
 $(window).on("load", function () {
 	$("#loader").css("display", "none");
 	$("#display-content").css("display","block");
+	resize();
 });
 
 $(document).ready(function () {
@@ -38,10 +45,11 @@ $(document).ready(function () {
 	window.addEventListener("resize", function () {
 		resize();
 	});
-	resize();
 
 	$(document).mouseup(function (e) {
 		var container = $("#custom-sidenav");
+		var snTrigger = $('.sidenav-trigger');
+
 		// if the target of the click isn't the container nor a descendant of the container
 		if (!container.is(e.target) && container.has(e.target).length === 0 && isSidenavOpen) {
 			isSidenavOpen = false;
@@ -63,11 +71,16 @@ function resize() {
 
 function loadSideNav(index, dest) {
 	if (!isSidenavOpen) {
+		isSidenavOpen = true;
 		$('#custom-sidenav, #custom-sidenav .header').css("background-color", content[index].color);
+		/* If its menu sidenav change colors to white */
+		if (index == 5) {
+			$('#custom-sidenav .header').css("color","white");
+			isSidenavOpen = false;
+		} else $('#custom-sidenav .header').css("color", "rgb(36, 36, 36)");
 		$('#custom-sidenav .sidenav-title').text(content[index].title);
 		$('#custom-sidenav .desc').html(content[index].desc);
 		$('#custom-sidenav').css("width",sidenavWidth);
-		isSidenavOpen = true;
 		$(".hover").css("pointer-events", "none");
 	} else {
 		isSidenavOpen = false;
@@ -79,6 +92,13 @@ function closenav() {
 	isSidenavOpen = false;
 	$('#custom-sidenav').css("width", "0px");
 	$(".hover").css("pointer-events", "auto");
+}
+
+function closeDefaultNav() {
+	//close mobile default sidenav
+	var elem = document.querySelector('.sidenav');
+	var instance = M.Sidenav.init(elem);
+	instance.close();
 }
 
 function openUrl(url) {

@@ -22,9 +22,7 @@
 			<nav class="white">
 				<div class="nav-wrapper container">
 					<a href="#" class="brand-logo black-text">Coutloot</a>
-					<a href="#" data-target="mobile-demo" class="sidenav-trigger right">
-						<i class="material-icons black-text">menu</i>
-					</a>
+					<a href="#" class="right grey-text text-darken-3 hide-on-large-only" onclick="loadSideNav(5,'')" style="padding: 0 1rem">Menu</a>
 					<ul id="nav-mobile" class="hide-on-med-and-down grey-text text-darken-1">
 						<li>
 							<a onclick="loadSideNav(0, 'one1')">News</a>
@@ -36,7 +34,7 @@
 							<a onclick="loadSideNav(2, '')">People</a>
 						</li>
 						<li>
-							<a onclick="loadSideNav(3,'two1')" href="#">Impact</a>
+							<a onclick="loadSideNav(3,'two1')">Impact</a>
 						</li>
 						<li>
 							<a onclick="loadSideNav(4,'two1')">Jobs</a>
@@ -46,26 +44,7 @@
 			</nav>
 		</div>
 		
-		<ul class="sidenav" id="mobile-demo">
-			<li>
-				<a href="#">News</a>
-			</li>
-			<li>
-				<a href="#">About</a>
-			</li>
-			<li>
-				<a href="#">People</a>
-			</li>
-			<li>
-				<a href="#">Impact</a>
-			</li>
-			<li>
-				<a href="#">Jobs</a>
-			</li>
-			<li>
-				<a href="#">Mobile</a>
-			</li>
-		</ul>
+		
 		
 		<!-- First block image -->
 		<section class="first-block animated slideInLeft">
@@ -158,7 +137,7 @@
 				<div class="col l4 hover" onclick="loadSideNav(3, 'two3')">
 					<p class="grey-text">February 06, 2018</p>
 					<h5 class="title">
-						 Women in Finance Charter
+						Women in Finance Charter
 					</h5>
 					<h6 class="desc">
 						10x has signed up to The Women in Finance Charter.
@@ -213,17 +192,17 @@
 					</div>
 				</div>
 			</footer>
-			
-			<!-- Side nav div -->
-			<div id="custom-sidenav">
-				<div>
-					<p class="header"> 
-						<span class="sidenav-title"></span>
-						<span class="right" onclick="closenav()"> Close</span>
-					</p>
-					<h6 class="desc">
-					</h6>
-				</div>
+		</div>
+		
+		<!-- Side nav div -->
+		<div id="custom-sidenav">
+			<div>
+				<p class="header"> 
+					<span class="sidenav-title"></span>
+					<span class="right" onclick="closenav()"> Close</span>
+				</p>
+				<h6 class="desc">
+				</h6>
 			</div>
 		</div>
 	</body>
@@ -236,4 +215,4 @@
 	<script type="text/javascript" src="assets/js/materialize.min.js"></script>
 	<script type="text/javascript" src="assets/js/custom.js"></script>
 	</html>
-	
+
