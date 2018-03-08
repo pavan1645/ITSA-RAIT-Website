@@ -22,22 +22,19 @@
 			<nav class="white">
 				<div class="nav-wrapper container">
 					<a href="#" class="brand-logo black-text">Coutloot</a>
-					<a href="#" class="right grey-text text-darken-3 hide-on-large-only" onclick="loadSideNav(5,'')" style="padding: 0 1rem">Menu</a>
+					<a href="#" class="right grey-text text-darken-3 hide-on-large-only" onclick="loadSideNav(4,'')" style="padding: 0 1rem">Menu</a>
 					<ul id="nav-mobile" class="hide-on-med-and-down grey-text text-darken-1">
 						<li>
-							<a onclick="loadSideNav(0, 'one1')">News</a>
+							<a onclick="st()">Techie</a>
 						</li>
 						<li>
-							<a onclick="loadSideNav(1, '')">About</a>
+							<a onclick="loadSideNav(1, '')">FAQs</a>
 						</li>
 						<li>
-							<a onclick="loadSideNav(2, '')">People</a>
+							<a onclick="loadSideNav(2, '')">What do we do?</a>
 						</li>
 						<li>
-							<a onclick="loadSideNav(3,'two1')">Impact</a>
-						</li>
-						<li>
-							<a onclick="loadSideNav(4,'two1')">Jobs</a>
+							<a onclick="loadSideNav(3, '')">Apply</a>
 						</li>
 					</ul>
 				</div>
@@ -170,49 +167,191 @@
 						<h6 class="desc">We are a team of financial services experts, technologists and creatives designing the future of money.</h6>
 					</div>
 				</div>
-			</section>
-			
-			<footer >
-				<hr>
-				<div class="row">
-					<div class="col l4 s12">
-						<h6 class="desc">&copy; 2017</h6>
+			</div>
+		</section>
+		
+		<footer >
+			<hr>
+			<div class="row">
+				<div class="col l4 s12">
+					<h6 class="desc">&copy; 2017</h6>
+				</div>
+				<div class="col l4 s12">
+					<h6 class="desc">
+						5 Howick Place <br> London SW1P 1WG
+					</h6>
+				</div>
+				<div class="col l4 s12">
+					<h6 class="desc">
+						+44 (0) 203 912 0160 <br> 
+						info@10xbanking.com <br>
+						@10xbanking
+					</h6>
+				</div>
+			</div>
+		</footer>
+	</div>
+	
+	<!-- Side nav div -->
+	<div id="custom-sidenav">
+		<div>
+			<p class="header"> 
+				<span class="sidenav-title"></span>
+				<span class="right" onclick="closenav()"> Close</span>
+			</p>
+			<h6 class="desc">
+			</h6>
+		</div>
+	</div>
+	
+	
+	
+	<div class="sidenav-contents" style="display:none">
+		<div class="techie">
+			<a>
+				<h5 id='one1'> — February 06, 2018</h5>
+				<h5> A Q&A with Antony Jenkins</h5>
+			</a>
+			<h6>10x Future Technologies Founder & Executive Chairman Antony Jenkins discusses the challenges and opportunities facing banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&A with Westpac Wire.</h6> <br>
+			<a onclick='displaySpan(this)'>
+				<h5> — January 26, 2018?</h5>
+				<h5 id='one2'>Open banking – what is it and why does it matter</h5>
+			</a> <br>
+			<h6>Open banking is now a reality. So what’s changing and what will the impact be for businesses and consumers?
+				<span style='display:none'>
+					Open banking is now a reality. Earlier this month, regulations came into force that will make it much easier for customers of UK banks to access better, cheaper and more personalised products from other providers. <br> <br>In 2016, a report from the government’s competition authority found that large banks weren’t having to compete very hard for customers, and that new providers were effectively being shut out of the market as a result. Because banks haven’t had to treat you well to keep you as a customer, the consequence has been expensive products and poor services. Those who have experienced punitive charges for overdrafts, or who were mis- sold PPI, are well aware of what it is like to be poorly served by the banks.<br><br>So what’s changing?<br><br>
+				</span>
+			</h6> <br>
+			<a>
+				<h5 id='one3'> — January 23, 2018</h5>
+				<h5>Making banking 10x better</h5>
+			</a>
+			<h6> 10x Future Technologies Founder and Executive Chairman Antony Jenkins talks to Will Beeson, Creator and Host of Rebank – Banking the Future, in this podcast that looks at how 10x is transforming financial services through technology to make banking better for banks, their customers and society.Click here to listen to the podcast. </h6><br>
+			<a>
+				<h5> — January 09, 2018</h5>
+				<h5>The future of banking</h5>
+			</a>
+			<h6> Want to know more about how 10x Banking is helping banks and other businesses transform with customer- focused technology? Click here to see 10x’s Antony Jenkins discuss the future of banking and more with the Financial Times’ Banking Editor, Martin Arnold.FT on Air on Facebook.</h6><br>
+		</div>
+		<div class="faq">
+			<a>
+				<h5 id='one1'> — February 06, 2018</h5>
+				<h5> A Q&A with Antony Jenkins</h5>
+			</a>
+			<h6>10x Future Technologies Founder & Executive Chairman Antony Jenkins discusses the challenges and opportunities facing banks, leadership, politics and his love of Miles Davis. Click here to listen to his podcast Q&A with Westpac Wire.</h6>
+			<br>
+			<a onclick='displaySpan(this)'>
+				<h5> — January 26, 2018?</h5>
+				<h5 id='one2'>Open banking – what is it and why does it matter</h5>
+			</a>
+			<br style='display:none'>
+			<h6>Open banking is now a reality. So what’s changing and what will the impact be for businesses and consumers?
+				<span style='display:none'>Open banking is now a reality. Earlier this month, regulations came into force that will make it much easier for customers of UK banks to access better, cheaper and more personalised products from other providers. <br> <br>In 2016, a report from the government’s competition authority found that large banks weren’t having to compete very hard for customers, and that new providers were effectively being shut out of the market as a result. Because banks haven’t had to treat you well to keep you as a customer, the consequence has been expensive products and poor services. Those who have experienced punitive charges for overdrafts, or who were mis- sold PPI, are well aware of what it is like to be poorly served by the banks. <br> <br>So what’s changing?<br><br>
+				</span>
+			</h6>
+			<br>
+			<a>
+				<h5 id='one3'> — January 23, 2018</h5>
+				<h5>Making banking 10x better</h5>
+			</a>
+			<h6>10x Future Technologies Founder and Executive Chairman Antony Jenkins talks to Will Beeson, Creator and Host of Rebank – Banking the Future, in this podcast that looks at how 10x is transforming financial services through technology to make banking better for banks, their customers and society.Click here to listen to the podcast.</h6>
+			<br>
+			<a>
+				<h5> — January 09, 2018</h5>
+				<h5>The future of banking</h5>
+			</a>
+			<h6>Want to know more about how 10x Banking is helping banks and other businesses transform with customer- focused technology? Click here to see 10x’s Antony Jenkins discuss the future of banking and more with the Financial Times’ Banking Editor, Martin Arnold.FT on Air on Facebook.</h6>
+			<br>
+		</div>
+		<div class="wdwd">
+			<h5>Antony Jenkins. Founder & Executive Chairman </h5>
+			<h6> As Founder and Executive Chairman of 10x Future Technologies, Antony leads the company that promises to redefine how banks operate and engage with customers.</h6> <br>
+			<h5>Rebecca Skitt. Chief Operating Officer </h5>
+			<h6> As Chief Operating Officer, Rebecca is leading the development of 10x’s culture and capabilities to re-imagine banking to make peoples lives much easier.</h6><br>
+			<h5>Mark Allcock. Chief Innovation Officer </h5>
+			<h6> As Chief Innovation Officer, Mark is leading the design of the 10x platform to transform financial services.</h6> <br>
+			<h5>Tam Holmes. Chief Digital & Trust Officer </h5>
+			<h6> As Chief Digital & Trust Officer, Tam is leading the delivery of our next generation digital banking capabilities and experiences to our global clients.</h6><br>
+			<h5>Sallyann Brookes. Chief Human Resources Officer </h5>
+			<h6> As Chief HR Officer, Sallyann leads the people agenda to allow great people to thrive in 10x and ensure its a 10x better place to work.</h6> <br>
+			<h5>Richard Given. General Counsel </h5>
+			<h6> As General Counsel, Richard provides legal advice to support the 10x team to deliver transformational services in line with our core value of integrity.</h6><br>
+			<h5>Amanda Jenkins. Chief Impact Officer </h5>
+			<h6> As Chief Impact Officer, Amanda leads the 10x Impact Programme bringing to life one of our core values.</h6>
+		</div>
+		<div class="apply">
+			<h5>Application Form</h5>
+			<form class='col s12 form' method="get" action="#" id="form">
+				<div class='row'>
+					<div class='input-field col s6 l4'>
+						<input name='first_name' type='text' class='validate'>
+						<label for='first_name'>First Name</label>
 					</div>
-					<div class="col l4 s12">
-						<h6 class="desc">
-							5 Howick Place <br> London SW1P 1WG
-						</h6>
-					</div>
-					<div class="col l4 s12">
-						<h6 class="desc">
-							+44 (0) 203 912 0160 <br> 
-							info@10xbanking.com <br>
-							@10xbanking
-						</h6>
+					<div class='input-field col s6 l4'>
+						<input name='last_name' type='text' class='validate' value="hello">
+						<label for='last_name'>Last Name</label>
 					</div>
 				</div>
-			</footer>
+				<div class='row'>
+					<div class='input-field col s12 l4'>
+						<input name='email' type='email' class='validate'>
+						<label for='email'>Email</label>
+					</div>
+					<div class='input-field col s12 l4'>
+						<input name='phone' type='text' class='validate'>
+						<label for='phone'>Phone Number</label>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='input-field col s12 l8'>
+						<input name='linkedin' type='email' class='validate'>
+						<label for='linkedin'>LinkedIn Profile</label>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='file-field input-field col s12 l8'>
+						<div class='btn'>
+							<span>Resume</span>
+							<input type='file' name="file" id="file">
+						</div>
+						<div class='file-path-wrapper'>
+							<input class='file-path validate' type='text' placeholder='Upload your resume'>
+						</div>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='input-field col s12 l8'>
+						<select name="exp">
+							<option value='0' selected>0</option>
+							<option value='1'>1</option>
+							<option value='2'>2</option>
+							<option value='3'>3</option>
+							<option value='4'>4</option>
+							<option value='5'>5</option>
+							<option value='6'>6</option>
+							<option value='gt6'>>6</option>
+						</select>
+						<label>Experience (in years)</label>
+					</div>
+				</div>
+				<div class='row expDesc' style='display:none'>
+					<div class='input-field col s12 l8'>
+						<textarea name='desc' class='materialize-textarea'></textarea>
+						<label for='desc'>Describe Your Experience</label>
+					</div>
+				</div>
+				<button class='btn waves-effect waves-light' type='submit' name='action'>Submit</button>
+			</form>
 		</div>
-		
-		<!-- Side nav div -->
-		<div id="custom-sidenav">
-			<div>
-				<p class="header"> 
-					<span class="sidenav-title"></span>
-					<span class="right" onclick="closenav()"> Close</span>
-				</p>
-				<h6 class="desc">
-				</h6>
-			</div>
-		</div>
-	</body>
-	
-	
-	
-	
-	<!--JavaScript at end of body for optimized loading-->
-	<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="assets/js/materialize.min.js"></script>
-	<script type="text/javascript" src="assets/js/custom.js"></script>
-	</html>
+	</div>
+</body>
+
+
+
+
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="assets/js/materialize.min.js"></script>
+<script type="text/javascript" src="assets/js/custom.js"></script>
+</html>
 

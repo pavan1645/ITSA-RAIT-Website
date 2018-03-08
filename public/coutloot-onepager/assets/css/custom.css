@@ -140,7 +140,8 @@ footer hr{width: 80%}
 #custom-sidenav a:hover, #custom-sidenav a:focus{color: rgb(58, 58, 63);}
 
 #menu-sidenav li:first-of-type{padding-top: 10%}
-#menu-sidenav li{text-align: center; font-size: 2rem; color: white}
+#menu-sidenav li{text-align: center; font-size: 2rem;}
+#menu-sidenav a{ color: white}
 
 @media screen and (max-width: 992px){
 	nav .brand-logo{float: none !important}
