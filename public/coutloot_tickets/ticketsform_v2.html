@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+	
+	<title>Ticket Form</title>
+	
+	<style>
+		.bg-pink{background-color: #ff4948}
+		.text-pink{color: #ff4948}
+		hr{border-top: 1px solid black; width: 95%; margin-top: 0}
+		textarea{
+			overflow-y: scroll;
+			overflow-x: hidden;
+			resize: none;
+		}
+		label{margin: 0px}
+		.form-control{border: none; border-radius: 0.5rem}
+		.form-control:focus{border-color: #ff4948;    box-shadow: 0 0 0 0.1rem rgba(255, 71, 71, 0.4);}
+		input[type=file]{
+			display: none;
+		}
+		.file-input label, .fa-calendar-alt{cursor: pointer}
+		.custom-checkbox .custom-control-input:checked~.custom-control-label::after{background-color: #ff4948; border-radius: 0.25rem}
+		button.bg-pink{border: 2px solid #ff4948 !important;}
+		button.bg-pink:hover{background-color: white; color: #ff4948}
+		.btn.focus, .btn:focus{box-shadow: 0 0 0 0.2rem rgba(255, 71, 71, 0.25)}
+	</style>
+</head>
+
+<body>
+	<div class="row p-4">
+		<div class="col-12 col-md-4 offset-md-4 text-center bg-pink text-light pt-2">
+			<h4>Fill Ticket Details</h4>
+		</div>
+		<div class="col-12 col-md-4 offset-md-4 py-4 bg-light">
+			<form id="myForm">
+				<div>
+					<h5 class="text-center">Event Information</h5><hr>
+				</div>
+				<div class="form-group">
+					<label for="title">Title<span class="text-pink">*</span></label>
+					<input type="text" class="form-control" id="title" name="title">
+				</div>
+				<div class="form-group">
+					<label for="date">Date<span class="text-pink">*</span></label>
+					<div class="input-group ">
+						<input type="date" class="form-control" id="date" name="date" aria-describedby="basic-addon2">
+						<div class="input-group-append" onclick="opendate()">
+							<span class="input-group-text bg-pink " id="basic-addon2">
+								<i class="fas fa-calendar-alt fa-inverse"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="venue">Venue<span class="text-pink">*</span></label>
+					<input type="text" class="form-control" id="venue" name="venue">
+				</div>
+				<div>
+					<h5 class="text-center">Ticket Information</h5><hr>
+				</div>
+				<div class="form-group">
+					<label for="ticketCount">No. of Tickets<span class="text-pink">*</span></label>
+					<input type="number" class="form-control" id="ticketCount" name="ticketCount">
+				</div>
+				<div class="form-group">
+					<label for="cost">Cost per ticket<span class="text-pink">*</span></label>
+					<input type="number" class="form-control" id="cost" name="cost">
+				</div>
+				<div class="form-group row">
+					<label class="col-12">Ticket Images<span class="text-pink">*</span></label>
+					<div class="col-4 file-input">
+						<label for="file">
+							<img src="upload.png" class="p-4 img-fluid" />
+						</label>
+						<input class="file" id="file" name="file" type="file" />
+					</div>
+					<div class="col-4 file-input">
+						<label for="file">
+							<img src="upload.png" class="p-4 img-fluid" />
+						</label>
+						<input class="file" id="file" name="file" type="file" />
+					</div>
+					<div class="col-4 file-input">
+						<label for="file">
+							<img src="upload.png" class="p-4 img-fluid" />
+						</label>
+						<input class="file" id="file" name="file" type="file" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="notes">Notes</label>
+					<textarea class="form-control" id="notes" name="notes"></textarea>
+				</div>
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="customCheck1" name="tnc">
+					<label class="custom-control-label" for="customCheck1">
+						I agree to the <span class="text-pink">Terms & Conditions*</span>
+					</label>
+				</div>
+				<button type="submit" class="btn col-12 my-3 bg-pink">SUBMIT TICKET</button>
+			</form>
+		</div>
+	</div>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+ crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+	 crossorigin="anonymous"></script>
+
+	<script>
+		function opendate() {
+			$("#date").select()
+		}
+		$(document).ready(() => {
+			$(".file").on('change', function () {
+				console.log($(this).prop('files'));
+			});
+			$("#myForm").on('submit', function(e) {
+				e.preventDefault();
+				console.log($(this).serializeArray());
+			});
+		})
+	</script>
+
+</body>
+
+</html>
