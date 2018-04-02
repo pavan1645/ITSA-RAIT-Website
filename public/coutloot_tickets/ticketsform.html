@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<style>
+		/* label focus color */
+		/* .input-field input:focus + label {
+			color: #ff4948 !important;
+		} */
+		/* label underline focus color */
+		/* .input-field input:focus {
+			border-bottom: 1px solid #ff4948 !important;
+			box-shadow: 0 1px 0 0 #ff4948 !important;
+		} */
+	</style>
+</head>
+
+<body>
+	<div>
+		<!-- Replace with header content -->
+		<h4 class="center">< !-- Add header --></h4>
+	</div>
+	<div class="row">
+		<form id="myForm" class="col s12 m6 offset-m3" style="border: 1px solid black">
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="title" name="title" type="text" class="validate">
+					<label for="title">Event Title</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="input-field col s12">
+					<textarea id="desc" name="desc" class="materialize-textarea"></textarea>
+					<label for="desc">Description</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s6">
+					<input id="venue" name="venue" type="text" class="validate">
+					<label for="venue">Venue</label>
+				</div>
+				<div class="input-field col s6">
+					<input type="text" name="datepicker" class="datepicker">
+					<label for="datepicker">Date</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s6">
+					<i class="fas fa-rupee-sign prefix" data-fa-transform="shrink-4"></i>
+					<input id="buy_price" type="number" name="buy_price" class="validate">
+					<label for="buy_price">Buying Price</label>
+				</div>
+				<div class="input-field col s6" style="">
+					<i class="fas fa-rupee-sign prefix" data-fa-transform="shrink-4"></i>
+					<input id="sell_price" type="number" name="sell_price" class="validate">
+					<label for="sell_price">Selling Price</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="file-field input-field col s12 m6">
+					<div class="btn">
+						<span>Image 1</span>
+						<input type="file" class="file" name="file" accept="image/*">
+					</div>
+					<div class="file-path-wrapper">
+						<input class="file-path validate" type="text">
+					</div>
+				</div>
+				<div class="file-field input-field col s12 m6">
+					<div class="btn">
+						<span>Image 2</span>
+						<input type="file" class="file" name="file" accept="image/*">
+					</div>
+					<div class="file-path-wrapper">
+						<input class="file-path validate" type="text">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s2 offset-s5">
+					<button class="center btn  waves-effect waves-light" type="submit" name="action">Submit
+						<i class="material-icons right">send</i>
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	<div>
+		<!-- Replace with footer content -->		
+		<h4 class="center">< !-- Add footer --></h4>
+	</div>
+</body>
+
+<!--JavaScript at end of body for optimized loading-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+ crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script>
+	$(document).ready(function () {
+		$('#myForm').on('submit', function (e) {
+			e.preventDefault();
+			console.log($(this).serializeArray());
+		});
+
+		$(".file").on('change', function () {
+			console.log($('.file').prop('files'));
+		});
+	});
+
+	var elem = document.querySelector('.datepicker');
+	var instance = M.Datepicker.init(elem, {
+		format: "dd/mm/yyyy",
+		yearRange: [2018, 2020],
+		showClearBtn: true,
+		setDefaultDate: true
+	});
+	
+</script>
+</html>
