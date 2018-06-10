@@ -20,7 +20,7 @@
 		
 		$.ajax({
 			type: 'GET',
-			url: 'http://localhost:3000/api/imscrawler',
+			url: 'http://vrmaps.herokuapp.com/api/imscrawler',
 			success: function (output) {
 				output.body.forEach((element, index) => {
 					var str = output.body[index];
