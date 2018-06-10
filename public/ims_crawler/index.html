@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Pavan IMS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+</head>
+<body>
+	<div id="ims">
+	</div>
+	<link rel="stylesheet" href="http://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+	
+	<script>
+		let branches = ["IMS-Andheri SV Road","IMS-AndheriNLR","IMS-Bandra","IMS-Borivali","IMS-Churchgate","IMS-Dadar","IMS-Ghatkopar","IMS-Kandivali","IMS-Panvel","IMS-Powai","IMS-Thane","IMS-Vasai Rd","IMS-Vashi"];
+		
+		
+		$.ajax({
+			type: 'GET',
+			url: 'http://localhost:3000/api/imscrawler',
+			success: function (output) {
+				output.body.forEach((element, index) => {
+					var str = output.body[index];
+					document.getElementById("ims").innerHTML += "<div id='i"+index+"'>" + str + "</div>" ;
+					document.getElementById("ims").innerHTML += "<br>";
+					if (index == output.body.length-1) {
+						done(output.body);
+					}
+				});
+			}
+		}); 
+
+		function done(res) {
+			for (let index = 0; index < res.length; index++) {
+				var el = document.getElementById("i"+index);
+				
+				var b_tr = el.querySelectorAll("tr")[4];
+				if (b_tr) {
+					var b = b_tr.querySelectorAll("td");
+					el.innerHTML = "<h3>"+b[3].innerHTML+"</h3>" + el.innerHTML;
+					// console.log(b[3].innerHTML);
+				}
+				
+				var th = el.getElementsByTagName("tr")[0];
+				el.getElementsByTagName("tr")[0].remove();
+				var th_html = "<thead>" + th.innerHTML + "</thead>"
+				$('#i' + index + " table").prepend(th_html);
+				
+				document.querySelectorAll("tr").forEach((tr) => {
+					var date = tr.getElementsByTagName("td")[0].innerHTML;
+					var d;
+					if (date.length == 5) {
+						d = Number(date.substring(0, 1));
+						tr.getElementsByTagName("td")[0].innerHTML = d;
+					}
+					if (date.length == 6) {
+						d = Number(date.substring(0, 2));
+						tr.getElementsByTagName("td")[0].innerHTML = d;
+						// console.log(date.substring(0, 1));
+					}
+					var today = new Date();
+					if (d < today.getDate()) {
+						tr.remove();
+					}
+				})
+//3
+				$('#i'+index+" table").DataTable({
+					paging: false,
+					columnDefs: [
+						{ targets: [2, 3, 4, 5], visible: false }
+					]
+				});
+
+			}
+		}
+		
+	</script>
+</body>
+</html>
