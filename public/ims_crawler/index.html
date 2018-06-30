@@ -22,7 +22,8 @@
 			type: 'GET',
 			url: 'http://vrmaps.herokuapp.com/api/imscrawler',
 			success: function (output) {
-				output.body.forEach((element, index) => {
+				console.log(output);
+				output['body'].forEach((element, index) => {
 					var str = output.body[index];
 					document.getElementById("ims").innerHTML += "<div id='i"+index+"'>" + str + "</div>" ;
 					document.getElementById("ims").innerHTML += "<br>";
@@ -51,22 +52,16 @@
 				
 				document.querySelectorAll("tr").forEach((tr) => {
 					var date = tr.getElementsByTagName("td")[0].innerHTML;
-					var d;
-					if (date.length == 5) {
-						d = Number(date.substring(0, 1));
-						tr.getElementsByTagName("td")[0].innerHTML = d;
-					}
-					if (date.length == 6) {
-						d = Number(date.substring(0, 2));
-						tr.getElementsByTagName("td")[0].innerHTML = d;
-						// console.log(date.substring(0, 1));
-					}
+					var day = date.substr(0, 2);
+					var month = date.substr(3,2);
+					date = month + "/" + day + "/" + "18";
+					var d = new Date(date);
 					var today = new Date();
-					if (d < today.getDate()) {
+					if (d < today) {
 						tr.remove();
 					}
 				})
-//3
+//3 
 				$('#i'+index+" table").DataTable({
 					paging: false,
 					columnDefs: [
